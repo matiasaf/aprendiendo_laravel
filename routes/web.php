@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('persona/alta', function() {
+    return view('alta');
+});
+
+Route::get('persona/listado', function() {
+    return view('listado');
+});
+
+Route::get('persona/modificacion', function() {
+    return view('modificar');
+});
