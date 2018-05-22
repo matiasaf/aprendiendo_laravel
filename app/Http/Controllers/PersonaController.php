@@ -44,7 +44,7 @@ class PersonaController extends Controller
 
         //redirecciono al formulario de carga con el mensaje de éxito
         return redirect()
-                ->route('persona.alta.view')
+                ->route('persona.listado.view')
                 ->with('status', 'La persona '.$persona->nombre.' '.$persona->apellido.' fue agregada con éxito.');
     }
 
@@ -81,5 +81,16 @@ class PersonaController extends Controller
         $personas = Persona::all();
 
         return view('personas.listado', array('personas' => $personas));
+    }
+
+    public function destroy($id)
+    {
+      $persona = Persona::find($id);
+
+      $persona->delete();
+
+      return redirect()
+              ->route('persona.listado.view')
+              ->with('status', 'La persona fue eliminada con éxito.');
     }
 }

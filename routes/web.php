@@ -49,3 +49,10 @@ Route::put('persona/{id}', [
   'as' => 'persona.update'
 
 ]);
+
+Route::get('persona/delete/{id}',[
+
+  'uses' => 'PersonaController@destroy',
+  'as' => 'persona.eliminar'
+
+]);

@@ -32,7 +32,7 @@
 
   <script type="text/javascript">
   $(document).ready(function() {
-      $('#success_message').slideToggle(4000);
+      // $('#success_message').slideToggle(4000);
   })
   </script>
 

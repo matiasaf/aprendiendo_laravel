@@ -26,10 +26,8 @@
 					<td>{{$persona->email}}</td>
 					<td>{{$persona->organismo->nombre}}</td>
 					<td>
-						<i class="material-icons">remove_red_eye</i>
-						<a href="{{route('persona.modificar.view',[ 'id' => $persona->id ])}}"><i class="material-icons">edit</i></a>
-
-						<i class="material-icons" onclick="eliminar({{$persona->id}})">delete</i>
+						<a href="{{route('persona.modificar.view',['id' => $persona->id])}}"><i class="material-icons">edit</i></a>
+						<a href="{{route('persona.eliminar', ['id' => $persona->id])}}"> <i class="material-icons">delete</i></a>
 					</td>
 				</tr>
 
@@ -47,7 +45,6 @@
 		var r = confirm("¿Seguro/a que desea eliminar esta persona?");
 		if (r == true)
 		{
-			axios.delete('');
 		}
 	}
 </script>
