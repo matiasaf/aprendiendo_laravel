@@ -28,7 +28,7 @@
 					<td>{{$persona->organismo->nombre}}</td>
 					<td>
 						<a href="{{route('persona.modificar.view',['id' => $persona->id])}}"><i class="material-icons">edit</i></a>
-						<a href=""> <i class="material-icons" onClick="eliminar({{$persona->id}})" >delete</i></a>
+						<a href="{{route('persona.eliminar',['id' => $persona->id])}}"> <i class="material-icons" >delete</i></a>
 					</td>
 				</tr>
 
