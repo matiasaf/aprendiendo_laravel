@@ -9,6 +9,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <title>@yield('titulo')</title>
+  <style type="text/css">
+    .error
+    {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .exito
+    {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+  </style>
 
 </head>
 
