@@ -15,9 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('persona/listado', function () {
+    return view('personas.listado');
+});
+
 Route::get('persona/alta', [
 
-  'uses' => 'PersonaController@getAltaView',
+  'uses' => 'PersonaController@obtenerVistaAlta',
   'as' => 'persona.alta.view'
 
 ]);
@@ -29,10 +33,16 @@ Route::post('persona', [
 
 ]);
 
-Route::get('persona/listado', function () {
-    return view('listado');
-});
+Route::get('persona/modificacion/{id}', [
 
-Route::get('persona/modificacion', function () {
-    return view('modificar');
-});
+  'uses' => 'PersonaController@obtenerVistaModificar',
+  'as' => 'persona.modificar.view'
+
+]);
+
+Route::put('persona/{id}', [
+
+  'uses' => 'PersonaController@update',
+  'as' => 'persona.update'
+
+]);

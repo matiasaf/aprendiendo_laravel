@@ -9,26 +9,31 @@
 	<table class="centered">
 		<thead>
 			<tr>
-				<th>DNI</th>
 				<th>Apellido</th>
-				<th>Nombbre</th>
+				<th>Nombre</th>
+				<th>E-mail</th>
 				<th>Organismo</th>
 				<th>Acciones</th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<tr>
-				<td>36910259</td>
-				<td>Lopez</td>
-				<td>Anibal Francisco</td>
-				<td>Dirección General de Informática</td>
-				<td>
-					<i class="material-icons">remove_red_eye</i>
-					<i class="material-icons">edit</i>
-					<i class="material-icons" onclick="eliminar(36910259)">delete</i>
-				</td>
-			</tr>
+
+			@foreach ($personas as $persona)
+				<tr>
+					<td>{{$persona->apellido}}</td>
+					<td>{{$persona->nombre}}</td>
+					<td>{{$persona->email}}</td>
+					<td>{{$persona->organismo->nombre}}</td>
+					<td>
+						<i class="material-icons">remove_red_eye</i>
+						<i class="material-icons">edit</i>
+						<i class="material-icons" onclick="eliminar({{$persona->id}})">delete</i>
+					</td>
+				</tr>
+
+			@endforeach
+
 		</tbody>
 	</table>
 </div>
@@ -41,8 +46,8 @@
 		var r = confirm("¿Seguro/a que desea eliminar esta persona?");
 		if (r == true)
 		{
-			//redirigir eliminar
-		} 
+			axios.delete('');
+		}
 	}
 </script>
 @endsection

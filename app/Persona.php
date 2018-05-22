@@ -11,7 +11,7 @@ class Persona extends Model
 
 
     public function organismo(){
-      return $this->hasOne('App\Organismo', 'organismo_id');
+      return $this->belongsTo('App\Organismo', 'organismo_id');
     }
 
 }
