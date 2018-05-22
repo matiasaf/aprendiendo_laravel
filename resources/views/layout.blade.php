@@ -44,13 +44,8 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 
-<<<<<<< HEAD
-  <script src="/js/app.js">
-
-  </script>
-=======
   <script src="/js/app.js"></script>
->>>>>>> f6d4bdf
+
 
   <script type="text/javascript">
   $(document).ready(function() {
