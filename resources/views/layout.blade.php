@@ -7,13 +7,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>@yield('titulo')</title>
+  
 </head>
 
 <body>
-  @yield('contenido')
+
+  @include('includes.error-message')
+
+  @include('includes.success-message')
+
+
+    @yield('contenido')
+
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  @yield('scripts')
 
 </body>
 </html>

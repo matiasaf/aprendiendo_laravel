@@ -15,14 +15,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('persona/alta', function() {
-    return view('alta');
-});
+Route::get('persona/alta', [
 
-Route::get('persona/listado', function() {
+  'uses' => 'PersonaController@getAltaView',
+  'as' => 'persona.alta.view'
+
+]);
+
+Route::post('persona', [
+
+  'uses' => 'PersonaController@store',
+  'as' => 'persona.store'
+
+]);
+
+Route::get('persona/listado', function () {
     return view('listado');
 });
 
-Route::get('persona/modificacion', function() {
+Route::get('persona/modificacion', function () {
     return view('modificar');
 });
