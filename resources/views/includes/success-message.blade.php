@@ -1,7 +1,7 @@
 
 @if (session('status'))
 
-<div class="row">
+<div class="row" id="success_message">
   <div class="col s3">
   </div>
    <div class="col s6 m6">

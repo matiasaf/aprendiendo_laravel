@@ -4,7 +4,7 @@
 @section('contenido')
 <div class="container">
 	<h2 class="center-align">Listado de Personas</h2>
-	<a class="btn-floating right" href=""><i class="material-icons">add</i></a>
+	<a class="btn-floating right" href="{{route('persona.alta.view')}}"><i class="material-icons">add</i></a>
 	<br>
 	<table class="centered">
 		<thead>
@@ -27,7 +27,8 @@
 					<td>{{$persona->organismo->nombre}}</td>
 					<td>
 						<i class="material-icons">remove_red_eye</i>
-						<i class="material-icons">edit</i>
+						<a href="{{route('persona.modificar.view',[ 'id' => $persona->id ])}}"><i class="material-icons">edit</i></a>
+
 						<i class="material-icons" onclick="eliminar({{$persona->id}})">delete</i>
 					</td>
 				</tr>

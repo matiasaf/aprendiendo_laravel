@@ -71,8 +71,15 @@ class PersonaController extends Controller
         $persona->save();
 
         return redirect()
-              ->route('persona.alta.view')
+              ->route('persona.listado.view')
               ->with('status', 'La persona '.$persona->nombre.' '.$persona->apellido.' fue modificada con éxito.');
     }
 
+
+    public function obtenerListadoPersonas()
+    {
+        $personas = Persona::all();
+
+        return view('personas.listado', array('personas' => $personas));
+    }
 }

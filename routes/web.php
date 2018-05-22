@@ -15,9 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('persona/listado', function () {
-    return view('personas.listado');
-});
+Route::get('persona/listado',[
+
+  'uses' => 'PersonaController@obtenerListadoPersonas',
+  'as' => 'persona.listado.view'
+
+]);
 
 Route::get('persona/alta', [
 
