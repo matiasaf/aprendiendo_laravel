@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('persona/listado',[
+Route::get('/',[
 
   'uses' => 'PersonaController@obtenerListadoPersonas',
   'as' => 'persona.listado.view'

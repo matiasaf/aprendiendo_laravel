@@ -20,6 +20,7 @@
 		<tbody>
 
 			@foreach ($personas as $persona)
+
 				<tr>
 					<td>{{$persona->apellido}}</td>
 					<td>{{$persona->nombre}}</td>
@@ -35,6 +36,9 @@
 
 		</tbody>
 	</table>
+
+	{{$personas->links()}}
+
 </div>
 @endsection
 

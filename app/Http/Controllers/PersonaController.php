@@ -78,7 +78,7 @@ class PersonaController extends Controller
 
     public function obtenerListadoPersonas()
     {
-        $personas = Persona::all();
+        $personas = Persona::paginate(5);
 
         return view('personas.listado', array('personas' => $personas));
     }
