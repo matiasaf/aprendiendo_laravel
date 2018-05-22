@@ -46,7 +46,7 @@ Route::put('persona/{id}', [
 
 ]);
 
-Route::delete('persona/delete/{id}',[
+Route::get('persona/delete/{id}',[
 
   'uses' => 'PersonaController@destroy',
   'as' => 'persona.eliminar'
