@@ -21,6 +21,7 @@ class PersonaController extends Controller
         // mensajes de error predefinidos
         $messages = [
           'required' => 'El campo :attribute es requerido.',
+          'max' => 'El campo :attribute no debe tener más de 15 caracteres.',
         ];
 
         // validaciones
@@ -92,5 +93,6 @@ class PersonaController extends Controller
       return redirect()
               ->route('persona.listado.view')
               ->with('status', 'La persona fue eliminada con éxito.');
+
     }
 }
